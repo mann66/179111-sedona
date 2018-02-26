@@ -1,0 +1,22 @@
+// mixins
+
+@import url("/global/mixins.scss");
+
+// variables
+
+@import url("/global/variables.scss");
+
+// global
+
+@import url("/global/layaut.scss");
+@import url("/global/fonts.scss");
+
+// blocks
+
+@import url("/blocks/main-nav.scss");
+@import url("/blocks/page-header.scss");
+@import url("/blocks/page-footer.scss");
+@import url("/blocks/forms.scss");
+@import url("/pages/forms-page.scss");
+@import url("/pages/main-page.scss");
+@import url("/pages/photo-page.scss");
