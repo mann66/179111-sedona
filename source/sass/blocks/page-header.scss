@@ -1,0 +1,116 @@
+.page-header {
+  //min-height: 670px; /* Временно для сетки */
+  @include container();
+}
+
+.main-menu {
+  min-height: 57px; /* Временно для сетки */
+}
+
+.main-menu__right, .main-menu__left {
+  background-color: #f2f2f2; /* Временно */
+  //min-width: 320px;
+  @include list();
+}
+
+.main-menu__item {
+  display: inline-block;
+  min-width: 320px;
+  min-height: 57px;
+  line-height: 57px;
+}
+
+.main-menu__link {
+  @include link();
+}
+
+.main-menu__section {
+  position: relative;
+  min-height: 57px;
+  border-bottom: 1px solid transparent;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -51px;
+  height: 83px;
+  width: 102px;
+  z-index: 1;
+  background: url("/img/logo/logo-sedona-mobile.svg") no-repeat 0 0;
+}
+
+.menu-toggle {
+  float: right;
+  width: 23px;
+  height: 22px;
+  margin-top: 18px;
+  margin-right: 20px;
+  border: 0;
+  background-image: url("/img/icon/icon-menu.svg");
+  //cursor: pointer;
+}
+
+.main-menu__section {
+  text-align: center;
+}
+
+.header__welcome {
+  display: block;
+  height: 389px;
+  text-align: center;
+  background: url("/img/content/bg-back-mobile@1x.jpg") no-repeat 0 0;
+  background-size: cover;
+}
+
+.text-logo {
+  margin-top: 56px;
+}
+
+.img-triangle {
+  display: block;
+  height: 57px;
+  margin-top: 15px;
+  background: url("/img/content/intro-triangle.svg") no-repeat center 0;
+  background-size: cover;
+}
+
+@media (min-width: $tablet-width) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-menu {
+    height: 57px;
+  }
+
+  .main-menu__mobile {
+    height: 0;
+  }
+
+  .main-menu__right, .main-menu__left {
+    display: inline-block;
+    line-height: 57px;
+  }
+
+  .main-main__left {
+    float: left;
+    width: 330px;
+    text-align: center;
+  }
+
+  .main-menu__right {
+    float: right;
+    width: 330px;
+    text-align: center;
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    min-width: 105px;
+    font-family: $font-fmlblt;
+    font-size: $font-sz;
+    text-transform: uppercase;
+  }
+}

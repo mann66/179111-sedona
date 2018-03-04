@@ -1,7 +1,7 @@
 @font-face {
   font-family: "STSans";
-  src: url("/source/fonts/pt-sans.woff") format("woff"),
-    url("/source/fonts/pt-sans.woff2") format("woff2");
+  src: url("/source/fonts/ptsans.woff") format("woff"),
+    url("/source/fonts/ptsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: optional;
@@ -9,9 +9,10 @@
 
 @font-face {
   font-family: "STSans Bold";
-  src: url("/source/fonts/pt-sans-bold.woff") format("woff"),
-    url("/source/fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("/source/fonts/ptsansbold.woff") format("woff"),
+    url("/source/fonts/ptsansbold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: optional;
 }
+

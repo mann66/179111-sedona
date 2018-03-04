@@ -1,0 +1,36 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@mixin wrapper() {
+  text-align: center;
+}
+
+@mixin link() {
+  text-decoration: none;
+}
+
+@mixin container() {
+
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
