@@ -237,12 +237,14 @@
   }
 }
 
+// Планшетная версия
+
 @media (min-width: $tablet-width) {
   .menu-toggle, .toggle-close {
     display: none;
   }
 
-  .main-menu {
+  .main-menu--closed {
     position: relative;
     height: 57px;
   }
@@ -344,6 +346,8 @@
     background-size: 100%;
   }
 }
+
+// Десктопнтая версия
 
 @media (min-width: $desktop-width) {
   .main-menu__right {
