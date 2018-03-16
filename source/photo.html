@@ -9,45 +9,48 @@
   </head>
   <body class="container">
 
-    <nav class="top-menu">
-      <ul class="top-menu__list">
-        <li class="top-menu__item">
-          <a href="#" class="top-menu__link top-menu__link--active">
-            Главная
-          </a>
-        </li>
-        <li class="top-menu__item">
-          <a href="#" class="top-menu__link">
-            Фото и видео
-          </a>
-        </li>
-        <li class="top-menu__item">
-          <a href="#" class="top-menu__link">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="top-menu__item">
-          <a href="#" class="top-menu__link">
-            Html academy
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <header class="page-header">
 
-    <header class="light-header">
-      <div class="light-header__wrap">
-        <div class="light-header__logo">
-          <img src="#" height="83" width="102" alt="City of Sedona">
-        </div>
-        <div class="header-menu">
-          <button class="header-menu__toggle"></button>
-        </div>
-        <div class="header__content">
-          <b class="header__title">
-            Sedona
-          </b>
-        </div>
+      <nav class="main-menu main-menu--closed main-menu--opened main-menu--nojs">
+
+        <ul class="main-menu__left">
+          <li class="main-menu__item main-menu__item--active">
+            <button class="toggle-close toggle-close--active" type="button"></button>
+            <a href="https://www.yandex.ru" class="main-menu__link main-menu__link--active">
+              Главная
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Фото и видео
+            </a>
+          </li>
+        </ul>
+
+        <ul class="main-menu__right">
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Html academy
+            </a>
+          </li>
+        </ul>
+
+        <section class="main-menu__section">
+          <img class="header__logo" src="img/logo/logo-sedona-mobile.svg" alt="Logo-Sedona" width="102" height="83">
+          <button class="menu-toggle"></button>
+        </section>
+      </nav>
+
+      <div class="header__welcome">
+        <img class="text-logo" src="img/content/text-sedona-index.svg" alt="Welcome of Sedona" width="282" height="214">
+        <div class="header__triangle"></div>
       </div>
+
     </header>
 
     <main class="photo-page">
@@ -130,20 +133,21 @@
       <video src="#" width="321" height="201" class="main-page__video"></video>
     </aside>
 
-    <footer class="footer-main">
-      <b class="footer-main__hashtag">
+    <footer class="page-footer">
+      <b class="page-footer__hashtag">
         #visitSEDONA
       </b>
-      <div class="footer-main__social">
-        <a href="#" class="footer-social footer-social--"></a>
-        <a href="#" class="footer-social footer-social--"></a>
-        <a href="#" class="footer-social footer-social--"></a>
-      </div>
-      <div class="footer-main__copyright">
-        <p class="footer-copyright">
+      <section class="page-footer__social">
+        <a href="#" class="footer-social footer-social--twitter"></a>
+        <a href="#" class="footer-social footer-social--facebook"></a>
+        <a href="#" class="footer-social footer-social--youtube"></a>
+      </section>
+      <div class="page-footer__copyright">
+        <p class="footer-copyright__txt">
           Разработано
         </p>
-        <img src="#" alt="copyright-logo" height="34" width="27" class="footer-main__copyright-logo">
+        <div class="page-footer__logo"></div>
+        <!--<img src="#" alt="copyright-logo" height="34" width="27" class="page-footer__copyright-logo">-->
       </div>
     </footer>
   </body>

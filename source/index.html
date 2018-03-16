@@ -5,81 +5,87 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="js/main.js">-->
     <title>Главная-Sedona</title>
   </head>
   <body>
 
     <header class="page-header">
 
-      <nav class="main-menu">
+      <nav class="main-menu--closed">
 
-        <!--<div class="main-menu__transform">-->
+        <ul class="main-menu__left">
+          <li class="main-menu__item main-menu__item--active">
+            <button class="toggle-close toggle-close--active" type="button"></button>
+            <a href="https://www.yandex.ru" class="main-menu__link main-menu__link--active">
+              Главная
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Фото и видео
+            </a>
+          </li>
+        </ul>
 
-          <ul class="main-menu__left">
-            <li class="main-menu__item">
-              <a href="https://www.yandex.ru" class="main-menu__link main-menu__link--active">
-                Главная
-              </a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">
-                Фото и видео
-              </a>
-            </li>
-          </ul>
-
-          <ul class="main-menu__right">
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">
-                Html academy
-              </a>
-            </li>
-          </ul>
-        <!--</div>-->
+        <ul class="main-menu__right">
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">
+              Html academy
+            </a>
+          </li>
+        </ul>
 
         <section class="main-menu__section">
-          <div class="header__logo"></div>
+          <img class="header__logo" src="img/logo/logo-sedona-mobile.svg" alt="Logo-Sedona" width="102" height="83">
           <button class="menu-toggle"></button>
         </section>
       </nav>
 
       <div class="header__welcome">
-        <img src="img/content/text-sedona-index.svg" class="text-logo" alt="Welcome of Sedona" width="282" height="214">
-        <div class="img-triangle"></div>
+        <img class="text-logo" src="img/content/text-sedona-index.svg" alt="Welcome of Sedona" width="282" height="214">
+        <div class="header__triangle"></div>
       </div>
 
     </header>
 
     <main class="main-page">
-      <div class="main-page__caption">
-        <h2 class="page-title">
-          Седона-небольшой <br>
+
+      <div class="title-wrap">
+        <h2 class="page__title">
+          Седона-небольшой
           городок в Аризоне,<br>
           заслуживающий большего!
         </h2>
-        <p class="main-page__subtitle">
+        <p class="page__subtitle">
           Рассмотрим 5 причин, по которым
           Седона круче чем Гранд Каньон!
         </p>
       </div>
 
-      <section class="advantages advantages--one">
-        <h2 class="page-title">
-          Настоящий городок
-        </h2>
-        <p class="advantages__number">
-           - №1 -
-        </p>
-        <p class="advantages__subtitle">
-          Седона не аттракцион для туристов,
-          там течет своя жизнь
-        </p>
-        <img src="" alt="sedona-img" width="320" height="260" class="advantages__img">
+      <section class="advantages advantages--blue">
+        <div class="advantages__wrap">
+          <h2 class="page__title--white">
+            Настоящий городок
+          </h2>
+          <p class="advantages__number">
+            - №1 -
+          </p>
+          <p class="advantages__txt">
+            Седона не аттракцион для туристов,
+            там течет своя жизнь xvbxbxb cbcbcncn cbcnbcnbc cxbcbcbc cbcbcb
+          </p>
+        </div>
+        <img class="advantages__img" src="img/content/main-city-mobile@1x.jpg" alt="sedona-img" width="320" height="">
+      </section>
+
+      <section class="advantages-content">
+
         <ul class="advantages__list">
 
           <li class="advantages__item">
@@ -123,87 +129,123 @@
         </ul>
       </section>
 
-      <section class="advantages advantages--one">
-        <h2 class="page-title">
-          Там есть мост дьявола
-        </h2>
-        <p class="advantages__number">
-           - №2 -
-        </p>
-        <p class="advantages__subtitle">
-          Да, по нему можно пройти!
-          Если вы осмелитесь, конечно
-        </p>
-        <img src="" alt="sedona-img" width="320" height="260" class="advantages__img">
+      <section class="advantages advantages--blue">
+        <div class="advantages__wrap">
+          <h2 class="page__title--white">
+            Там есть мост дьявола
+          </h2>
+          <p class="advantages__number">
+            - №2 -
+          </p>
+          <p class="advantages__txt">
+            Да, по нему можно пройти!
+            Если вы осмелитесь, конечно
+          </p>
+        </div>
+        <img class="advantages__img advantages__img--left" src="img/content/main-bridge-mobile@1x.jpg" alt="sedona-img" width="320" height="260">
       </section>
 
-      <section class="advantages advantages--three">
-        <h2 class="page-title">
-          Небольшая площадь
-        </h2>
-        <p class="advantages__number">
-           - №3 -
-        </p>
-        <p class="advantages__subtitle">
-          ВСЕ достопримечательности находятся очень близко
-        </p>
-      </section>
+      <div class="advantages-light__wrap">
+        <section class="advantages advantages--light">
+          <div class="advantages__wrap">
+            <h2 class="page__title">
+              Небольшая площадь
+            </h2>
+            <p class="advantages__number">
+              - №3 -
+            </p>
+            <p class="advantages__txt">
+              ВСЕ достопримеча-тельности находятся очень близко
+            </p>
+          </div>
+        </section>
 
-      <section class="advantages advantages">
-        <h2 class="page-title">
-          Там есть мост дьявола</h2>
-        <p class="advantages__number">
-           - №4 -
-        </p>
-        <p class="advantages__subtitle">
-          Ехать в Седону из Лас-Вегаса
-          совсем не скучно!
-        </p>
-      </section>
+        <section class="advantages--light">
+          <div class="advantages__wrap">
+            <h2 class="page__title">
+              Красивая дорога</h2>
+            <p class="advantages__number">
+              - №4 -
+            </p>
+            <p class="advantages__txt">
+              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            </p>
+          </div>
+        </section>
 
-      <section class="advantages advantages">
-        <h2 class="page-title">
-          Мало туристов</h2>
-        <p class="advantages__number">
-           - №5 -
-        </p>
-        <p class="advantages__subtitle">
-          Большинство едет в гранд каньон
-          и толпится там
-        </p>
-      </section>
+        <section class="advantages--light">
+          <div class="advantages__wrap">
+            <h2 class="page__title">
+              Мало туристов</h2>
+            <p class="advantages__number">
+              - №5 -
+            </p>
+            <p class="advantages__txt">
+              Большинство едет в гранд каньон<br> и толпится там
+            </p>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <aside>
-      <section class="offer__main">
+    <aside class="offer">
+      <section class="offer__section">
         <b class="offer__title">
           Заинтересовались?</b>
         <p class="offer__content">
           Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
+
+        <a href="#" class="button-search">Найти гостиницу</a>
       </section>
 
-      <article class="map-main">
-        <img src="#" alt="" height="27" width="27" class="map__marker">
-      </article>
+      <section class="main-page__map">
+        <img class="map-marker" src="img/icon/icon-map-marker.svg" alt="marker" height="27" width="27">
+      </section>
     </aside>
 
-    <footer class="footer-main">
-      <b class="footer-main__hashtag">
+    <footer class="page-footer">
+      <b class="page-footer__hashtag">
         #visitSEDONA
       </b>
-      <div class="footer-main__social">
-        <a href="#" class="footer-social footer-social--"></a>
-        <a href="#" class="footer-social footer-social--"></a>
-        <a href="#" class="footer-social footer-social--"></a>
-      </div>
-      <div class="footer-main__copyright">
-        <p class="footer-copyright">
+      <section class="page-footer__social">
+        <a href="#" class="footer-social footer-social--twitter"></a>
+        <a href="#" class="footer-social footer-social--facebook"></a>
+        <a href="#" class="footer-social footer-social--youtube"></a>
+      </section>
+      <div class="page-footer__copyright">
+        <p class="footer-copyright__txt">
           Разработано
         </p>
-        <img src="#" alt="copyright-logo" height="34" width="27" class="footer-main__copyright-logo">
+        <div class="page-footer__logo"></div>
+        <!--<img src="#" alt="copyright-logo" height="34" width="27" class="page-footer__copyright-logo">-->
       </div>
     </footer>
+
+    <script>
+
+      // var close = document.querySelector(".toggle-close");
+      //
+      // close.addEventListener("click", function()
+      // {
+      //   console.log("Клик по кнопке Закрыть");
+      // });
+
+      var open = document.querySelector(".menu-toggle");
+      var close = document.querySelector(".toggle-close");
+      var menu = document.querySelector(".main-menu--closed");
+      open.addEventListener("click", function(event)
+      {
+        event.preventDefault();
+        menu.classList.add("main-menu--opened");
+      });
+      close.addEventListener("click", function(event)
+      {
+        event.preventDefault();
+        menu.classList.remove("main-menu--opened");
+      });
+
+    </script>
   </body>
 </html>

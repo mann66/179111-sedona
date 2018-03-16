@@ -1,27 +1,83 @@
 .page-header {
-  //min-height: 670px; /* Временно для сетки */
+  padding-bottom: 40px;
   @include container();
 }
 
-.main-menu {
-  min-height: 57px; /* Временно для сетки */
-}
-
-.main-menu__right, .main-menu__left {
-  background-color: #f2f2f2; /* Временно */
-  //min-width: 320px;
+.main-menu__left, .main-menu__right {
+  min-width: 320px;
   @include list();
 }
 
 .main-menu__item {
-  display: inline-block;
-  min-width: 300px;
-  height: 57px;
-  line-height: 57px;
+  line-height: 20px;
+  background-color: #81b3d2;
+  border: {
+    bottom: 1px solid #678fa8;
+    top: 1px solid #9ac2db;
+  }
+}
+
+// Градиент внизу меню
+
+.main-menu__right {
+  .main-menu__item:last-child {
+    position: relative;
+    border-bottom: 0;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(#80b2d1, #6d97b1);
+      cursor: pointer;
+    }
+  }
+  .main-menu__item:last-child:hover {
+    &::after {
+      display: none;
+    }
+  }
+  .main-menu__item:last-child:active {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .main-menu__link {
   @include link();
+  display: block;
+  font: {
+    family: $font-fmlblt;
+    size: 18px;
+  }
+  line-height: 24px;
+  padding: {
+    top: 17px;
+    bottom: 16px;
+  }
+  color: #ffffff;
+}
+
+// Цвет фона при наведении и активации пунктов меню
+
+.main-menu__item:hover .toggle-close {
+  background-color: #669ec0;
+}
+
+.main-menu__item:active .toggle-close {
+  background-color: #5496bd;
+}
+
+.main-menu__item--active .main-menu__link {
+  opacity: 0.3;
+}
+
+.main-menu__link:active {
+  opacity: 0.3;
 }
 
 .main-menu__section {
@@ -30,29 +86,51 @@
   border-bottom: 1px solid transparent;
 }
 
+//  Логотип
+
 .header__logo {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -51px;
   height: 83px;
   width: 102px;
+  margin-left: -51px;
   z-index: 1;
-  background: url("/img/logo/logo-sedona-mobile.svg") no-repeat 0 0;
 }
 
+// Кнопка закрытия меню
+
+.toggle-close {
+  margin: {
+    top: 17px;
+    right: 20px;
+  }
+  border: 0;
+  background: #81b3d2 url("/img/icon/icon-cross.svg") no-repeat center center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+// Кнопка открытия меню
+
 .menu-toggle {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  //float: right;
   width: 23px;
   height: 22px;
-  margin-top: 18px;
-  margin-right: 20px;
+  margin: {
+    top: 18px;
+    right: 20px;
+  }
   border: 0;
   background-image: url("/img/icon/icon-menu.svg");
   cursor: pointer;
 }
 
 .main-menu__section {
+  //position: relative;
   text-align: center;
 }
 
@@ -68,7 +146,9 @@
   margin-top: 56px;
 }
 
-.img-triangle {
+// Треугольник затемнения в хэйдаре
+
+.header__triangle {
   display: block;
   height: 57px;
   margin-top: 55px;
@@ -76,58 +156,178 @@
   background-size: cover;
 }
 
+// Медиа выражения
+
+@media (max-width: $mobile-width-max) {
+
+  .main-menu--closed {
+    .main-menu__item {
+      display: none;
+    }
+  }
+
+  .main-menu--opened .main-menu__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 320px;
+    min-height: 57px;
+  }
+
+  .main-menu--opened .main-menu__item:hover {
+    background-color: #669ec0;
+    border-top: #e4e882;
+    .toggle-close {
+      background-color: #669ec0;
+    }
+  }
+
+  .main-menu--opened .main-menu__item:active {
+    background-color: #5496bd;
+    border-top: #77acca;
+  }
+
+  .main-menu--opened .main-menu__item--active {
+    background-color: #5496bd;
+    border-top: #77acca;
+  }
+
+  .main-menu--opened .main-menu__item--active .toggle-close {
+    background-color: #5496bd;
+  }
+
+  .main-menu--opened .toggle-close:hover {
+    background-color: #669ec0;
+  }
+
+  .main-menu--opened .toggle-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 23px;
+    height: 22px;
+  }
+
+  .main-menu--nojs .main-menu__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 320px;
+    min-height: 57px;
+  }
+
+  .main-menu--nojs .main-menu__item:hover {
+    background-color: #669ec0;
+    border-top: #e4e882;
+  }
+
+  .main-menu--nojs .main-menu__item:active {
+    background-color: #5496bd;
+    border-top: #77acca;
+  }
+
+  .main-menu--nojs .toggle-close {
+    display: none;
+  }
+
+  .main-menu--nojs .main-menu__item--active {
+    background-color: #5496bd;
+  }
+}
+
 @media (min-width: $tablet-width) {
-  .menu-toggle {
+  .menu-toggle, .toggle-close {
     display: none;
   }
 
   .main-menu {
+    position: relative;
     height: 57px;
   }
 
-  .main-menu__mobile {
-
-  }
-
-  .main-menu__section {
-    //position: relative;
-  }
-
   .main-menu__right, .main-menu__left {
-    display: inline-block;
     position: absolute;
-    line-height: 57px;
+    display: inline-block;
+    width: 335px;
+    height: 57px;
+    //line-height: 57px;
+    font-size: 0;
     z-index: 1;
-    text-align: justify;
+    //text-align: justify;
   }
-
-  .main-main__left {
-    width: 330px;
-  }
-
-  //.main-menu__left:after {
-  //  content: "";
-  //  display: inline-block;
-  //  width: 100%;
-  //}
 
   .main-menu__right {
-    width: 270px;
+    top: 0;
     left: 50%;
     padding-left: 51px;
+    .main-menu__item:last-child {
+      border-bottom: 0;
+      &::after {
+        background: none;
+      }
+    }
+  }
+
+  .main-menu__left {
+    top: 0;
+    left: 0;
   }
 
   .main-menu__item {
     display: inline-block;
     min-width: 105px;
-    font-family: $font-fmlblt;
-    font-size: $font-sz;
-    text-transform: uppercase;
     text-align: center;
+    border: none;
+    background-color: #ffffff;
   }
 
   .main-menu__link {
-    text-align: center;
+    @include link();
+    display: block;
+    font: {
+      family: $font-fmlblt;
+      size: $font-sz;
+    }
+    line-height: 24px;
+    padding: {
+      top: 17px;
+      bottom: 16px;
+    }
+    color: #ffffff;
+  }
+
+  .main-menu__item:hover {
+    background-color: #ffffff;
+  }
+
+  .main-menu__link {
+    display: block;
+    text-decoration: none;
+    //text-align: center;
+    font: {
+      family: $font-fmlblt;
+      size: $font-sz;
+    }
+    color: #000000;
+    &:hover {
+      color: #81b3d2;
+    }
+    &:active {
+      color: #cacaca;
+      opacity: 0.3;
+    }
+  }
+
+  .main-menu__link--active {
+    color: #766357;
+    &:active {
+      color: #604e43;
+    }
+    &:hover {
+      color: #604e43;
+    }
   }
 
   .header__welcome {
@@ -139,18 +339,19 @@
     height: 350px;
   }
 
-  .img-triangle {
-    margin-top: 58px;
+  .header__triangle {
+    margin-top: 50px;
     background-size: 100%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-menu__right {
-    width: 100%;
+    width: 500px;
   }
 
   .main-menu__left {
     width: 500px;
   }
 }
+

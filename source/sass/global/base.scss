@@ -1,8 +1,9 @@
 body {
-  font-family: "Arial", "sans-serif";
-  font-size: 18px;
-  font-style: normal;
-  line-height: 26px;
+  font-family: $font-fml, "Arial", sans-serif;
+  font-size: $font-szs;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 img {
