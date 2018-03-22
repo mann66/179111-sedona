@@ -1,10 +1,10 @@
 .page-header {
   padding-bottom: 40px;
-  @include container();
+  @include container-fluid();
 }
 
 .main-menu__left, .main-menu__right {
-  min-width: 320px;
+  min-width: 220px;
   @include list();
 }
 
@@ -129,16 +129,24 @@
   cursor: pointer;
 }
 
+//.menu-toggle:active .main-menu__item {
+//  transition: display 0.8s 0.3s linear;
+//}
+
 .main-menu__section {
   //position: relative;
   text-align: center;
 }
 
 .header__welcome {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
   height: 389px;
-  text-align: center;
-  background: url("/img/content/bg-back-mobile@1x.jpg") no-repeat 0 0;
+  //text-align: center;
+  background: url("/img/content/bg-back-mobile@1x.jpg") no-repeat center 0;
   background-size: cover;
 }
 
@@ -149,9 +157,11 @@
 // Треугольник затемнения в хэйдаре
 
 .header__triangle {
+  align-items: flex-end;
   display: block;
   height: 57px;
-  margin-top: 55px;
+  width: 100%;
+  //margin-top: 55px;
   background: url("/img/content/intro-triangle.svg") no-repeat center 0;
   background-size: cover;
 }
@@ -170,7 +180,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    min-width: 320px;
+    width: 100%;
+    //min-width: 320px;
     min-height: 57px;
   }
 
@@ -214,7 +225,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    min-width: 320px;
+    width: 100%;
+    //min-width: 320px;
     min-height: 57px;
   }
 

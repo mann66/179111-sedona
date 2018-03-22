@@ -1,72 +1,119 @@
 .page-footer {
-  @include container();
+  //display: block;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @include container-fluid();
   text-align: center;
 }
 
 .page-footer__hashtag {
-  display: block;
+  min-width: 160px;
+  width: 33%;
+  display: inline-block;
   font: {
     family: $font-fmlblt;
     size: $font-szz;
   }
   line-height: 26px;
+  margin: 38px 0;
 }
 
 .page-footer__social {
-  display: inline-block;
-  max-width: 280px;
+  width: 33%;
+  min-width: 160px;
   text-align: center;
 }
 
-.footer-social {
+.footer-social__link {
   display: inline-block;
-  width: 48px;
+  width: 46px;
   height: 48px;
+  margin: 2px 0;
+  background: #81b3d2;
   text-align: center;
-  &--twitter {
-    background: #81b3d2 url("/img/icon/icon-twitter.svg") no-repeat center center;
-  }
-  &--facebook {
-    background: #81b3d2 url("/img/icon/icon-facebook.svg") no-repeat center center;
-  }
-  &--youtube {
-    background: #81b3d2 url("/img/icon/icon-youtube.svg") no-repeat center center;
-  }
+  vertical-align: middle;
+  //margin-bottom: 17px;
+
+  //&--twitter {
+  //  background: #81b3d2 url("/img/icon/icon-twitter.svg") no-repeat center center;
+  //}
+  //&--facebook {
+  //  background: #81b3d2 url("/img/icon/icon-facebook.svg") no-repeat center center;
+  //}
+  //&--youtube {
+  //  background: #81b3d2 url("/img/icon/icon-youtube.svg") no-repeat center center;
+  //}
+}
+
+.social-img {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+// Копирайт
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 35px;
+  width: 33%;
+  margin-right: 15px;
+  margin-top: 23px;
+  margin-bottom: 23px;
 }
 
 .footer-copyright__txt {
-  display: inline-block;
-  vertical-align: middle;
-  //text-align: left;
+  display: block;
+  width: 65%;
+  padding-right: 11px;
+  box-sizing: border-box;
+  text-align: right;
+  //line-height: 26px;
 }
 
 .page-footer__logo {
-  display: inline-block;
+  display: block;
   width: 27px;
   height: 34px;
-  vertical-align: middle;
-  background: url("/img/logo/logo-htmlacademy.svg") no-repeat center center;
+  //vertical-align: middle;
+}
+
+@media (min-width: 480px) {
+  .page-footer {
+    flex-direction: row;
+    min-height: 120px;
+    //flex-wrap: wrap;
+  }
+
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    width: 100%;
-    min-height: 120px;
+    //flex-direction: row;
+    //width: 100%;
+
   }
   .page-footer__hashtag {
-    display: inline-block;
-    width: 33%;
-    vertical-align: top;
+
   }
   .page-footer__social {
-    display: inline-block;
-    width: 33%;
-    vertical-align: top;
+
   }
   .page-footer__copyright {
-    display: inline-block;
-    width: 33%;
+    justify-content: flex-end;
     text-align: right;
-    vertical-align: top;
+    margin-right: 44px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__copyright {
+    margin-right: 60px;
   }
 }

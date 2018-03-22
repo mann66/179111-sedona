@@ -1,50 +1,70 @@
 .main-page {
-  @include container();
-
-  //text-align: center;
+  @include container-fluid();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-wrap {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+}
 
-  &::after {
-    content: url("/img/content/bg-triangle.svg");
-    display: block;
-    width: 320px;
-    height: 37px;
-    background-color: #81b3d2;
-  }
+.title-triangle {
+  width: 100%;
+  min-height: 37px;
+  background: #81b3d2 url("/img/content/bg-triangle.svg") no-repeat center 0;
+  background-size: cover;
 }
 
 .page__title {
-  display: inline-block;
-  margin: 0;
+  //display: inline-block;
+  width: 260px;
+  text-align: center;
+  //align-items: center;
+  margin-top: 30px;
+  margin-bottom: 18px;
+
   font: {
     family: $font-fmlblt;
     size: $font-sz;
   }
   line-height: 26px;
   //width: 280px;
-  margin-bottom: 26px;
+  //margin-bottom: 26px;
 
   &--white {
     display: inline-block;
     color: #ffffff;
-    //margin: 0;
+    width: 60%;
+    margin: {
+      top: 40px;
+      bottom: 15px;
+    }
+  }
+
+  &--light {
+    width: 280px;
   }
 }
 
 .page__subtitle {
-  display: inline-block;
-  width: 280px;
+  //display: inline-block;
+  width: 100%;
   margin: 0;
+  text-align: center;
   //font-size: 14px;
 }
 
 .advantages {
-  display: inline-block;
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: #ffffff;
 
   &--blue {
@@ -52,67 +72,145 @@
   }
 
   &--light {
+    //text-align: center;
     background-color: #eeeeee;
 
     &:last-child {
-      .advantages__txt {
+      .advantages__wrap--light {
         border-bottom: 0;
       }
     }
   }
 }
 
+.advantages-light__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #eeeeee;
+}
+
 .advantages__wrap {
-  width: 280px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.advantages__wrap--light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 83%;
+  border-bottom: 1px #d6d6d6 solid;
 }
 
 .advantages__number {
+  //display: block;
+  width: 50%;
   margin: 0;
+  margin-bottom: 18px;
 }
 
 .advantages__txt {
-  display: inline-block;
-  width: 100%;
+  //display: inline-block;
+  width: 74%;
   margin: 0;
-  border-bottom: 1px #d6d6d6 solid;
+  padding-bottom: 32px;
   line-height: 21px;
   text-align: center;
+
+  &--light {
+    width: 280px;
+  }
+}
+
+.advantages__img {
+  width: 100%;
+  height: auto;
+}
+
+.advantages-section {
+  width: 100%;
 }
 
 .advantages__list {
+  //display: flex;
   @include list();
   text-align: left;
 }
 
-.advanced__item {
+.advantages__item {
+  display: block;
+  margin: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
+
+.advantages-item__pic {
+  position: relative;
   display: inline-block;
-  min-width: 320px;
-  min-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  //vertical-align: top;
+}
+
+.advantages-item__icon {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  //vertical-align: top;
+  ////width: 20%;
+  //margin: {
+  //  //top: 40px;
+  //  right: 10px;
+  //  //bottom: 20px;
+  //}
+}
+
+.advantages-item__content {
+  display: inline-block;
+  vertical-align: top;
+  width: 68%;
+  margin: {
+    //top: 40px;
+    //left: 70px;
+  }
 }
 
 .advantages-item__title {
+  display: block;
   font: {
     family: $font-fmlblt;
     size: $font-sz;
   }
   line-height: 26px;
-  //margin-top: 0;
+  margin-top: 15px;
 }
 
-.advantages-item__content {
-  display: inline-block;
-  width: 230px;
+.advantages-item__txt {
   margin: {
-    top: 40px;
-    left: 70px;
+    top: 20px;
+    bottom: 0;
   }
 }
+
+// Реклама - Предложение
 
 .offer {
   //display: block;
   text-align: center;
-  @include container();
+  @include container-fluid();
 }
 
 .offer__section {
@@ -121,20 +219,24 @@
 }
 
 .offer__title {
-  //display: block;
+  display: block;
   //width: 280px;
   font: {
     family: $font-fmlblt;
     size: $font-szz;
   }
   line-height: 26px;
+  margin: 30px 0;
 }
 
 .offer__content {
   //display: inline-block;
   //width: 280px;
   margin: 0;
+  margin-bottom: 38px;
 }
+
+// Кнопка поиска
 
 .button-search {
   display: inline-block;
@@ -147,7 +249,7 @@
     family: $font-fmlblt;
     size: 21px;
   }
-  //line-height: 26px;
+  margin-bottom: 50px;
   text-align: center;
   vertical-align: top;
   text-transform: uppercase;
@@ -155,6 +257,8 @@
   background: #81b3d2;
   @include link();
 }
+
+// Карта Гугла
 
 .main-page__map {
   position: relative;
@@ -169,15 +273,17 @@
   display: block;
   width: 27px;
   height: 27px;
-  left: 150px;
+  left: 250px;
   top: 150px;
 }
+
+// Медиа выражения
 
 @media (min-width: $tablet-width) {
 
   .title-wrap {
-    width: 648px;
-    display: inline-block;
+    //width: 648px;
+    //display: inline-block;
     text-align: center;
 
     &::after {
@@ -185,78 +291,131 @@
     }
   }
 
+  .advantages-light__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   .advantages__wrap {
-    display: inline-block;
-    width: 165px;
-    margin: 45px 45px;
-    vertical-align: top;
+    width: 33%;
+    //margin: 45px 45px;
+    //vertical-align: top;
   }
 
   .page__title {
-    //display: block;
-    //width: 165px;
+    //display: inline-block;
+    width: 450px;
     font: {
       size: $font-szz;
     }
     line-height: 26px;
+
+    &--light {
+      width: 150px;
+    }
   }
 
   .page__subtitle {
-    width: 648px;
+    width: 100%;
   }
 
   .advantages {
+    flex-direction: row;
+    justify-content: space-between;
+    //width: 33%;
 
-    min-width: 256px;
     &--blue {
-      display: inline-block;
+      //display: inline-block;
       //float: left;
     }
     &--light {
-      display: inline-block;
+      width: 33%;
+      flex-direction: row;
+      justify-content: center;
+      //display: inline-block;
       //float: left;
     }
     &--right {
-      //float: right;
+      //flex-direction: row-reverse;
     }
   }
 
+  .advantages__wrap--light {
+    border: 0;
+  }
+
+  .advantages__img {
+    width: 66%;
+    height: auto;
+  }
+
+  .advantages-section {
+    //display: flex;
+    //flex-direction: row;
+  }
+
   .advantages__list {
+    display: flex;
+    flex-direction: row;
+
     text-align: center;
   }
 
   .advantages-light__wrap {
-    display: block;
-    @include clearfix();
+    //display: block;
+    //@include clearfix();
   }
 
   .advantages__img {
+
     //display: inline-block;
-    float: right;
-    vertical-align: top;
-    height: 100%;
+    //vertical-align: top;
+    //height: 100%;
     &--left {
-      float: left;
+      order: -1;
     }
   }
 
-  .advantages__txt {
-    border-bottom: 0;
+  .advantages__txt--light {
+    width: 80%;
   }
 
+  //br {
+  //  //display: none;
+  //}
+
   .advantages__item {
+    width: 33%;
+    //text-align: center;
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 45px;
+    margin: {
+      top: 0;
+    }
+  }
+
+  .advantages-item__pic {
+    display: block;
+    width: 15%;
+    margin: {
+      top: 55px;
+      right: auto;
+      bottom: 30px;
+      left: auto;
+    }
   }
 
   .advantages-item__content {
+    width: 70%;
     display: block;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .offer__section {
-    width: 458px;
+  .advantages-item__title {
+    margin-top: 0;
   }
 
   .button-search {
@@ -264,33 +423,46 @@
   }
 }
 
+// Десктопные ширины - фиксированные!!!
+
 @media (min-width: $desktop-width) {
+
+  .page__title {
+    width: 450px;
+  }
 
   .title-wrap {
     width: 800px;
   }
 
-  .advantages {
-    width: 400px;
-  }
-
-  .advantages__wrap {
-    width: 290px;
+  .advantages__item {
+    //display: inline-block;
+    //width: 400px;
+    text-align: center;
     margin: {
-      top: 50px;
-      left: 60px;
+      top: 0;
+      bottom: 65px;
     }
   }
 
-  .advantages__item {
-    //display: inline-block;
+  //.advantages-item__icon {
+  //  width: 15%;
+  //}
+
+  .advantages-item__content {
     width: 400px;
-    text-align: center;
   }
 
   .advantages-item__txt {
     width: 290px;
+    margin: {
+      right: auto;
+      left: auto;
+    }
+  }
 
+  .advantages__txt {
+    width: 262px;
   }
 }
 

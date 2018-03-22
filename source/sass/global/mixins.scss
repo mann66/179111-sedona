@@ -41,3 +41,12 @@
     width: 1200px;
   }
 }
+
+@mixin container-fluid () {
+  width: auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
