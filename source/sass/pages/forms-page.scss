@@ -1,0 +1,447 @@
+.reviews-page {
+  @include container-fluid ();
+  @include flex-column ();
+}
+
+//Заголовок страницы
+
+.reviews-page__caption {
+  width: $content-width;
+  text-align: center;
+  margin: {
+    top: 20px;
+    right: auto;
+    left: auto;
+  }
+}
+
+.reviews-page__title {
+  display: block;
+  //width: 260px;
+  text-align: center;
+  margin: {
+    top: 20px;
+    right: auto;
+    bottom: 20px;
+    left: auto;
+  }
+
+  font: {
+    family: $font-fmlblt;
+    size: $font-sz;
+  }
+  line-height: 26px;
+}
+
+.reviews-page__subtitle {
+  margin: {
+    top: 15px;
+    right: auto;
+    bottom: 20px;
+    left: auto;
+  }
+}
+
+// Разделительная линия
+
+hr {
+  margin-top: 5px;
+}
+
+.pages-lines {
+  margin-bottom: -33px;
+  display: none;
+}
+
+// Форма
+
+.reviews-forms {
+  @include flex-column();
+  width: 100%;
+}
+
+.flex-wrap {
+  width: 100%;
+}
+
+.reviews-page__fio, .reviews-page__contacts, .reviews-page__impression, .reviews-page__attraction, .reviews-page__emotions {
+  @include flex-column ();
+  width: $content-width;
+  margin: 0 auto;
+  //text-align: left;
+}
+
+.reviews-forms__name {
+  display: block;
+  //text-align: left;
+}
+
+//Представьтесь, Контакты
+
+.name-signature {
+  margin-right: 15px;
+}
+
+.label-name {
+  display: flex;
+  align-items: center;
+  //flex-grow: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.label-contacts {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: {
+    bottom: 20px;
+    //left: 22px;
+  }
+}
+
+.input-contacts__wrap {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contacts-signature {
+  display: block;
+  margin-left: 22px;
+
+  &--desktop {
+    display: none;
+  }
+}
+
+.forms-name {
+  width: 100%;
+  height: 60px;
+  border: none;
+  padding-left: 22px;
+  //margin-left: 15px;
+  //box-sizing: border-box;
+  background: #f2f2f2;
+  @include signature ();
+  //text-transform: none;
+
+  &--phone, &--email {
+    display: inline-block;
+    //width: 100%;
+    margin-left: 0;
+  }
+}
+
+.phone-pic {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  background: url("/img/icon/icon-phone.svg") #e6e6e6 no-repeat center center;
+}
+
+.email-pic {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  background: url("/img/icon/icon-mail.svg") #e6e6e6 no-repeat center center;
+}
+
+//Впечатление
+
+.forms-switch {
+  display: none;
+}
+
+.label-switch {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 60px;
+  margin-bottom: 15px;
+  @include signature ();
+  text-align: left;
+  cursor: pointer;
+}
+
+.radio-button {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 23px;
+  background: #f2f2f2;
+  vertical-align: middle;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 16px;
+    left: 17px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f2f2f2;
+  }
+}
+
+.forms-switch:hover .radio-button {
+  background: #000000;
+}
+
+.forms-switch:checked + .radio-button::before {
+  background: #000000;
+}
+
+//Достопримечательности
+
+.forms-checkout {
+  display: none;
+  //margin-left: -9999px;
+}
+
+.checkbox-triangle {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin-right: 25px;
+  vertical-align: middle;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+
+.forms-checkout:checked + .checkbox-triangle {
+  background: url("/img/icon/icon-tick.svg") #f2f2f2 no-repeat center center;
+  border-radius: 5px;
+}
+
+.checkout {
+  display: block;
+  margin-bottom: 25px;
+  //width: 100%;
+  //vertical-align: middle;
+}
+
+.checkbox-signature {
+  display: inline-block;
+  vertical-align: middle;
+  @include signature ();
+}
+
+
+//Опишите эмоции
+
+.forms-textarea {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border: none;
+  background-color: #f2f2f2;
+  padding: {
+    top: 20px;
+    left: 20px;
+  }
+  margin: {
+    bottom: 50px;
+    left: 0;
+  }
+  @include signature ();
+  box-sizing: border-box;
+}
+
+//Кнопка отправки формы
+
+.pages-submit {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #81b3d2;
+  font: {
+    family: $font-fmlblt;
+    size: $font-szz;
+  }
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.footnote {
+  //display: inline-block;
+  display: none;
+}
+
+// Медиавыражения
+
+@media (min-width: $tablet-width) {
+  .reviews-forms {
+    width: $content-width;
+    margin: 0 auto;
+  }
+
+  .reviews-page__subtitle {
+    width: 447px;
+  }
+
+  .reviews-page__title {
+    width: 300px;
+    padding: {
+      right: 50px;
+      left: 50px;
+    }
+    background: #ffffff;
+
+    &--h1 {
+      width: 400px;
+      font-size: $font-h1;
+    }
+
+    &--fio, &--impression {
+      padding: {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .reviews-forms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .reviews-page__contacts, .reviews-page__attraction, .reviews-page__emotions {
+    @include flex-column ();
+    width: 100%;
+  }
+
+  .reviews-page__fio, .reviews-page__impression {
+    width: 50%;
+  }
+
+  .reviews-page__impression {
+    order: -1;
+  }
+
+  .pages-lines {
+    display: block;
+    margin: {
+      top: 90px;
+    }
+
+    &--attraction {
+      margin-bottom: -45px;
+    }
+  }
+
+  .reviews-page__attraction {
+    display: block;
+    text-align: center;
+  }
+
+  .checkbox-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 180px;
+    align-content: center;
+    //width: 35%;
+    text-align: left;
+  }
+
+  .checkout {
+    margin: {
+      right: 35px;
+      left: 35px;
+    }
+  }
+
+  .label-switch {
+    margin-bottom: 25px;
+  }
+
+  .pages-submit {
+    width: 50%;
+  }
+
+  .footnote {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+  }
+}
+
+// Десктопная версия - размеры фиксированные!
+
+@media (min-width: $desktop-width) {
+
+  .reviews-forms {
+    width: 960px;
+  }
+
+  //.reviews-page__contacts, .reviews-page__attraction, .reviews-page__emotions {
+  //  width: 960px;
+  //}
+
+  .reviews-page__fio, .reviews-page__impression {
+    width: 480px;
+  }
+
+  .label-contacts {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    &--left {
+      justify-content: flex-end;
+    }
+  }
+
+  .checkbox-wrap {
+    width: auto;
+    height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .checkout {
+    display: inline-block;
+    margin: {
+      right: 0;
+      left: 0;
+    }
+  }
+
+  .contacts-wrap {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  .contacts-signature {
+    width: auto;
+    margin: {
+      right: 15px;
+      left: 0;
+    }
+
+    &--desktop-none {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
+  }
+
+  .input-contacts__wrap {
+    width: auto;
+  }
+
+  .forms-name--phone, .forms-name--email {
+    width: 258px;
+  }
+}

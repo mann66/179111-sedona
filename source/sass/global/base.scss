@@ -10,3 +10,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+//Модуль предложений
+
+.offer {
+  @include container-fluid();
+  text-align: center;
+}

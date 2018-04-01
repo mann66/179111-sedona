@@ -6,25 +6,26 @@
 }
 
 .title-wrap {
-  display: flex;
-  flex-direction: column;
+  @include flex-column ();
+  //display: flex;
+  //flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 88%;
+  width: $content-width;
+  margin-top: 15px;
 }
 
 .title-triangle {
-  width: 100%;
+  //width: 100%;
   min-height: 37px;
   background: #81b3d2 url("/img/content/bg-triangle.svg") no-repeat center 0;
   background-size: cover;
 }
 
-.page__title {
+.main-page__title {
   //display: inline-block;
   width: 260px;
   text-align: center;
-  //align-items: center;
   margin-top: 30px;
   margin-bottom: 18px;
 
@@ -33,7 +34,6 @@
     size: $font-sz;
   }
   line-height: 26px;
-  //width: 280px;
   //margin-bottom: 26px;
 
   &--white {
@@ -53,18 +53,16 @@
 
 .page__subtitle {
   //display: inline-block;
-  width: 100%;
+  width: $visual-width;
   margin: 0;
   text-align: center;
-  //font-size: 14px;
 }
 
 .advantages {
   display: flex;
   flex-direction: column;
-  //justify-content: center;
   align-items: center;
-  width: 100%;
+  width: $visual-width;
   background-color: #ffffff;
 
   &--blue {
@@ -87,7 +85,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: $visual-width;
   background: #eeeeee;
 }
 
@@ -157,7 +155,6 @@
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  //vertical-align: top;
 }
 
 .advantages-item__icon {
@@ -168,20 +165,12 @@
   bottom: 0;
   left: 0;
   margin: auto;
-
-  //vertical-align: top;
-  ////width: 20%;
-  //margin: {
-  //  //top: 40px;
-  //  right: 10px;
-  //  //bottom: 20px;
-  //}
 }
 
 .advantages-item__content {
   display: inline-block;
   vertical-align: top;
-  width: 68%;
+  width: 67%;
   margin: {
     //top: 40px;
     //left: 70px;
@@ -207,13 +196,7 @@
 
 // Реклама - Предложение
 
-.offer {
-  //display: block;
-  text-align: center;
-  @include container-fluid();
-}
-
-.offer__section {
+.main-offer__section {
   display: inline-block;
   width: 280px;
 }
@@ -282,8 +265,6 @@
 @media (min-width: $tablet-width) {
 
   .title-wrap {
-    //width: 648px;
-    //display: inline-block;
     text-align: center;
 
     &::after {
@@ -303,7 +284,7 @@
     //vertical-align: top;
   }
 
-  .page__title {
+  .main-page__title {
     //display: inline-block;
     width: 450px;
     font: {
@@ -333,8 +314,6 @@
       width: 33%;
       flex-direction: row;
       justify-content: center;
-      //display: inline-block;
-      //float: left;
     }
     &--right {
       //flex-direction: row-reverse;
@@ -362,16 +341,7 @@
     text-align: center;
   }
 
-  .advantages-light__wrap {
-    //display: block;
-    //@include clearfix();
-  }
-
   .advantages__img {
-
-    //display: inline-block;
-    //vertical-align: top;
-    //height: 100%;
     &--left {
       order: -1;
     }
@@ -380,10 +350,6 @@
   .advantages__txt--light {
     width: 80%;
   }
-
-  //br {
-  //  //display: none;
-  //}
 
   .advantages__item {
     width: 33%;
@@ -427,7 +393,7 @@
 
 @media (min-width: $desktop-width) {
 
-  .page__title {
+  .main-page__title {
     width: 450px;
   }
 
@@ -444,10 +410,6 @@
       bottom: 65px;
     }
   }
-
-  //.advantages-item__icon {
-  //  width: 15%;
-  //}
 
   .advantages-item__content {
     width: 400px;

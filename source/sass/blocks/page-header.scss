@@ -1,5 +1,5 @@
 .page-header {
-  padding-bottom: 40px;
+  //padding-bottom: 40px;
   @include container-fluid();
 }
 
@@ -81,14 +81,14 @@
 }
 
 .main-menu__section {
-  position: relative;
+  //position: relative;
   min-height: 57px;
   border-bottom: 1px solid transparent;
 }
 
 //  Логотип
 
-.header__logo {
+.header-logo {
   position: absolute;
   top: 0;
   left: 50%;
@@ -129,25 +129,37 @@
   cursor: pointer;
 }
 
-//.menu-toggle:active .main-menu__item {
-//  transition: display 0.8s 0.3s linear;
-//}
-
 .main-menu__section {
-  //position: relative;
+  position: relative;
   text-align: center;
 }
+
+// Картинка с приветствием
 
 .header__welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   height: 389px;
   //text-align: center;
   background: url("/img/content/bg-back-mobile@1x.jpg") no-repeat center 0;
   background-size: cover;
+  &--small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+    background: url("/img/content/bg-back-mobile@1x.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.header-sedona {
+  width: auto;
+  height: 39px;
+  margin-top: 50px;
 }
 
 .text-logo {
@@ -257,25 +269,23 @@
   }
 
   .main-menu--closed {
-    position: relative;
-    height: 57px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-menu__right, .main-menu__left {
-    position: absolute;
-    display: inline-block;
-    width: 335px;
-    height: 57px;
-    //line-height: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
     font-size: 0;
     z-index: 1;
     //text-align: justify;
   }
 
   .main-menu__right {
-    top: 0;
-    left: 50%;
-    padding-left: 51px;
+    margin-left: 102px;
     .main-menu__item:last-child {
       border-bottom: 0;
       &::after {
@@ -285,8 +295,8 @@
   }
 
   .main-menu__left {
-    top: 0;
-    left: 0;
+    //top: 0;
+    //left: 0;
   }
 
   .main-menu__item {
@@ -344,13 +354,26 @@
     }
   }
 
+  .main-menu__section {
+    position: static;
+  }
+
   .header__welcome {
     height: 518px;
+    &--small {
+      height: 290px;
+    }
   }
 
   .text-logo {
     width: 460px;
     height: 350px;
+  }
+
+  .header-sedona {
+    width: auto;
+    height: 78px;
+    margin-top: 90px;
   }
 
   .header__triangle {
@@ -359,15 +382,38 @@
   }
 }
 
-// Десктопнтая версия
+// Десктопнтая версия - размеры фиксированные!
 
 @media (min-width: $desktop-width) {
-  .main-menu__right {
-    width: 500px;
+  .main-menu__left {
+    width: 505px;
   }
 
-  .main-menu__left {
-    width: 500px;
+  .main-menu__right {
+    width: 505px;
+    margin-left: 188px;
+  }
+
+  .header__logo {
+    display: block;
+    //position: absolute;
+    //top: 0;
+    //left: 50%;
+    height: 96px;
+    width: 188px;
+    margin-left: -94px;
+    background: #81b3d2;
+    //z-index: 1;
+  }
+
+  .header__welcome--small {
+    height: 300px;
+  }
+
+  .header-sedona {
+    width: auto;
+    height: 79px;
+    margin-top: 100px;
   }
 }
 
