@@ -103,23 +103,28 @@ hr {
 
 .photo-like__wrap {
   display: block;
+  text-align: left;
 }
 
 .photo-like {
-  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
   font: {
     family: $font-fmlblt;
     size: $font-szs;
   }
   line-height: 24px;
-
-  &::before {
-    content: url("/img/icon/icon-like.svg");
-    width: 23px;
-    height: 21px;
-    margin-right: 10px;
-  }
 }
+
+.like-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 22px;
+  height: 20px;
+  margin-right: 10px;
+}
+
 
 //Сомневаетесь?
 
@@ -131,9 +136,96 @@ hr {
 
 //Видео
 
-.photo-page__video {
-  width: 100%;
+.video {
+  position: relative;
 }
+
+.video__wrap {
+  @include container-fluid();
+  //width: 100%;
+}
+
+.photo-page__video {
+  display: block;
+  width: auto;
+  height: 201px;
+  margin: 0 auto;
+  margin-bottom: 66px;
+}
+
+.video-panel {
+  position: absolute;
+  left: 50%;
+  bottom: -64px;
+  width: 280px;
+  height: 110px;
+  margin-left: -140px;
+}
+
+.playback-panel {
+  //position: relative;
+  display: block;
+  height: 45px;
+  background-color: rgba(30, 30, 30, 0.6);
+  bottom: 45px;
+  border-top: 1px solid transparent;
+}
+
+.playback-line {
+  display: block;
+  width: 235px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 21px;
+  border-top: 1px solid transparent;
+  background-color: rgba(163, 163, 163, 0.6);
+}
+
+.playback-circle {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: {
+    left: 35px;
+    top: -4px;
+  }
+  background-color: rgba(255, 255, 255, 1);
+  //z-index: 133;
+}
+
+.control-panel {
+  height: 66px;
+  padding-top: 22px;
+  text-align: left;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.replay-control {
+  display: inline;
+  border: none;
+  margin-left: 20px;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.subtitles-control {
+  display: inline;
+  border: none;
+  margin-left: 100px;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.fullscreen-control {
+  display: inline;
+  border: none;
+  margin-left: 30px;
+  background-color: #f2f2f2;
+  outline: none;
+}
+
 
 //Медиавыражения
 
@@ -204,21 +296,72 @@ hr {
     width: 50%;
     text-align: right;
     vertical-align: top;
+    margin-top: 28px;
   }
 
   .photo-like {
     display: inline-block;
-    margin-top: 30px;
     margin-right: 7%;
-
-    &::before {
-      vertical-align: middle;
-    }
   }
 
   .photo-offer__section {
     width: 442px;
   }
+
+  .photo-page__video {
+    width: 648px;
+    height: 499px;
+    margin-bottom: 0;
+  }
+
+  .video-panel {
+    //display: flex;
+    width: 648px;
+    bottom: -17px;
+    margin-left: -324px;
+  }
+
+  .playback-panel {
+    height: 92px;
+  }
+
+  .playback-line {
+    width: 389px;
+    margin: {
+      top: 43px;
+      left: 90px;
+    }
+  }
+
+  .playback-circle {
+    margin-left: 130px;
+  }
+
+  .control-panel {
+    position: relative;
+    top: -80px;
+    background-color: transparent;
+  }
+
+  .replay-control {
+    background-color: transparent;
+    margin-left: 34px;
+  }
+
+  .replay-icon, .subtitles-icon, .fullscreen-icon {
+    fill: #ffffff;
+  }
+
+  .subtitles-control {
+    background-color: transparent;
+    margin-left: 460px;
+  }
+
+  .fullscreen-control {
+    background-color: transparent;
+    margin-left: 20px;
+  }
+
 }
 
 //Десктоптные размеры - фиксированные!
@@ -229,7 +372,8 @@ hr {
   }
 
   .photo-page__item {
-    width: 33%;
+    position: relative;
+    width: 400px;
 
     &--full {
       width: 100%;
@@ -251,14 +395,37 @@ hr {
   }
 
   .author-like__wrap {
-    min-height: 80px;
-    margin-top: -80px;
-    background: #b2b2b2;
-    //opacity: 0.3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(4, 4, 4, 0.3);
   }
 
   .photo-name, .photo-author, .photo-like {
     color: #ffffff;
+  }
+
+  .like {
+    fill: #ffffff;
+  }
+
+  .photo-page__video {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video-panel {
+    width: 800px;
+    margin-left: -400px;
+  }
+
+  .playback-line {
+    width: 540px;
+  }
+
+  .subtitles-control {
+    margin-left: 600px;
   }
 }
 

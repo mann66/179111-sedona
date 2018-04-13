@@ -1,11 +1,8 @@
 .page-footer {
-  //display: block;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
   @include container-fluid();
   text-align: center;
 }
@@ -19,8 +16,20 @@
     size: $font-szz;
   }
   line-height: 26px;
-  margin: 38px 0;
+  margin: {
+    top: 32px;
+    bottom: 32px;
+  }
 }
+
+.hashtag {
+  color: #000000;
+  @include link();
+  line-height: 26px;
+
+}
+
+//Соц. кнопки
 
 .page-footer__social {
   width: 33%;
@@ -33,9 +42,17 @@
   width: 46px;
   height: 48px;
   margin: 2px 0;
-  background: #81b3d2;
+  background-color: #81b3d2;
   text-align: center;
   vertical-align: middle;
+  font-size: 0;
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .social-img {
@@ -52,8 +69,7 @@
   min-width: 160px;
   min-height: 35px;
   width: 33%;
-  margin-right: 15px;
-  margin-top: 23px;
+  margin-top: 30px;
   margin-bottom: 23px;
 }
 
@@ -63,50 +79,53 @@
   padding-right: 11px;
   box-sizing: border-box;
   text-align: right;
-  //line-height: 26px;
 }
 
 .page-footer__logo {
   display: block;
   width: 27px;
   height: 34px;
-  //vertical-align: middle;
+  &:hover .footer-logo {
+    fill: #81b3d2;
+  }
+
+  &:active .footer-logo {
+    fill:#b2b2b2;
+  }
 }
 
 @media (min-width: 480px) {
   .page-footer {
     flex-direction: row;
     min-height: 120px;
-    //flex-wrap: wrap;
   }
 
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer {
-    width: 960px;
 
-  }
   .page-footer__hashtag {
-
+    margin-top: 25px;
   }
-  .page-footer__social {
 
-  }
   .page-footer__copyright {
     justify-content: flex-end;
     text-align: right;
-    margin-right: 44px;
+    margin-top: 13px;
+  }
+
+  .page-footer__logo {
+    margin-right: 24%;
   }
 }
 
 @media (min-width: $desktop-width) {
 
-  .page-footer__hashtag {
-    text-align: left;
+  .page-footer {
+    width: 1200px;
   }
 
-  .page-footer__copyright {
-    margin-right: 0;
+  .page-footer__logo {
+    margin-right: 40px;
   }
 }
