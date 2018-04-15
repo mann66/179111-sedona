@@ -1,0 +1,138 @@
+.page-header {
+  @include container-fluid();
+}
+
+// Картинка с приветствием
+
+.header__welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 389px;
+  background-image: url("/img/content/bg-back-mobile@1x.jpg");
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("/img/content/bg-back-mobile@2x.jpg");
+  }
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  &--small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+    background-image: url("/img/content/bg-back-mobile@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5 dppx) {
+      background-image: url("/img/content/bg-back-mobile@2x.jpg");
+    }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.header-sedona {
+  width: auto;
+  height: 39px;
+  margin-top: 50px;
+}
+
+.text-logo {
+  margin-top: 91px;
+}
+
+// Треугольник затемнения в хэйдаре
+
+.header__triangle {
+  align-items: flex-end;
+  display: block;
+  height: 26px;
+  width: 100%;
+  //margin-top: 55px;
+  background: url("/img/content/bg-intro-triangle-mobile.svg") no-repeat center 0;
+  background-size: cover;
+}
+
+// Медиа выражения
+
+// Планшетная версия
+
+@media (min-width: $tablet-width) {
+
+  .header__welcome {
+    height: 518px;
+    background-image: url("/img/content/bg-back-tablet@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/content/bg-back-tablet@2x.jpg");
+    }
+    &--small {
+      height: 290px;
+      background-image: url("/img/content/bg-back-tablet@1x.jpg");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("/img/content/bg-back-tablet@2x.jpg");
+      };
+    }
+  }
+
+  .text-logo {
+    width: 460px;
+    height: 350px;
+    margin-top: 78px;
+  }
+
+  .header-sedona {
+    width: auto;
+    height: 78px;
+    margin-top: 90px;
+  }
+
+  .header__triangle {
+    min-height: 57px;
+    //margin-top: 50px;
+    background: url("/img/content/bg-intro-triangle-tablet.svg");
+    background-size: 100%;
+  }
+}
+
+// Десктопнтая версия - размеры фиксированные!
+
+@media (min-width: $desktop-width) {
+
+  .header-logo {
+    display: block;
+    height: 96px;
+    width: 188px;
+    margin-left: -94px;
+  }
+
+  .header__welcome {
+    background-image: utl("/img/content/bg-back-desktop@1x.jpg");
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("/img/content/bg-back-desktop@2x.jpg");
+    };
+
+    &--small {
+      background-image: url("/img/content/bg-back-desktop@1x.jpg");
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("/img/content/bg-back-desktop@2x.jpg");
+      }
+    }
+  }
+
+  .header__welcome--small {
+    height: 300px;
+  }
+
+  .header-sedona {
+    width: auto;
+    height: 79px;
+    margin-top: 100px;
+  }
+
+  .header__triangle {
+    background: url("/img/content/bg-intro-triangle-desktop.svg");
+  }
+}
+

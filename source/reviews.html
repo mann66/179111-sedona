@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Отзывы-Sedona</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+
+      <nav class="main-menu--closed">
+
+        <ul class="main-menu__left">
+          <li class="main-menu__item main-menu__item--active">
+            <button class="toggle-close toggle-close--active" type="button"></button>
+            <a href="index.html" class="main-menu__link main-menu__link--active">
+              Главная
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="photo.html" class="main-menu__link">
+              Фото и видео
+            </a>
+          </li>
+        </ul>
+
+        <ul class="main-menu__right">
+          <li class="main-menu__item">
+            <a href="reviews.html" class="main-menu__link">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="main-menu__item">
+            <a href="https://htmlacademy.ru" class="main-menu__link">
+              Html academy
+            </a>
+          </li>
+        </ul>
+
+        <section class="main-menu__section">
+          <a href="#" class="header-logo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-sedona-tablet.svg">
+              <img class="header-logo" src="img/logo/logo-sedona-mobile.svg" alt="Logo-Sedona" width="102" height="83">
+            </picture>
+          </a>
+          <button class="menu-toggle"></button>
+        </section>
+      </nav>
+
+      <div class="header__welcome--small">
+        <img class="header-sedona" src="img/content/text-sedona.svg" alt="text-Sedona" width="229" height="39">
+        <div class="header__triangle"></div>
+      </div>
+    </header>
+
+    <!--Содержание страницы-->
+
+    <main class="reviews-page">
+
+      <!--Заглавие-->
+
+      <div class="reviews-page__caption">
+        <h1 class="reviews-page__title reviews-page__title--h1">
+          Оставьте свой отзыв
+        </h1>
+        <p class="reviews-page__subtitle">
+          Помогите нашим отелям стать лучше!
+          Оставьте отзыв о них, а также о
+          посещенных вами достопримечательностях
+        </p>
+      </div>
+
+      <hr class="pages-line">
+
+      <!-- Форма -->
+
+      <form class="reviews-forms" action="https://echo.htmlacademy.ru" method="post">
+
+        <!--Представьтесь-->
+
+        <div class="reviews-page__fio">
+          <h2 class="reviews-page__title reviews-page__title--fio">
+            Представьтесь:
+          </h2>
+          <label class="label-name" for="name">
+            <span class="name-signature">Имя*:</span>
+            <input class="forms-name" type="text" id="name" name="urername" value="" placeholder="Петр" autofocus>
+          </label>
+          <label class="label-name" for="surname">
+            <span class="name-signature">Фамилия*:</span>
+            <input class="forms-name" type="text" id="surname" name="usersurname" value="" placeholder="Иванов">
+          </label>
+          <label class="label-name" for="patronymic">
+            <span class="name-signature">Отчество:</span>
+            <input class="forms-name" type="text" id="patronymic" name="userpatronymic" value="" placeholder="Александрович">
+          </label>
+        </div>
+
+        <hr class="pages-line">
+
+        <!--Контактная информация-->
+
+        <div class="reviews-page__contacts">
+          <hr class="pages-lines">
+          <h2 class="reviews-page__title">
+            Контактная информация:
+          </h2>
+          <div class="contacts-wrap">
+            <label class="label-contacts" for="phone">
+              <span class="contacts-signature contacts-signature--desktop-none">Контакный телефон*:</span>
+              <span class="contacts-signature contacts-signature--desktop">Телефон*:</span>
+              <span class="input-contacts__wrap">
+              <input class="forms-name forms-name--phone" type="tel" id="phone" name="userphone" value="" placeholder="Введите телефон">
+              <span class="phone-pic"></span>
+            </span>
+            </label>
+            <label class="label-contacts label-contacts--left" for="e-mail">
+              <span class="contacts-signature">Электронная почта*:</span>
+              <span class="input-contacts__wrap">
+              <input class="forms-name forms-name--email" type="email" id="e-mail" name="useremail" value="" placeholder="Введите e-mail">
+              <span class="email-pic"></span>
+            </span>
+            </label>
+          </div>
+
+        </div>
+
+        <hr class="pages-line">
+
+        <!--Ваше впечатление-->
+
+        <div class="reviews-page__impression">
+          <h2 class="reviews-page__title reviews-page__title--impression">
+            Ваше общее впечатление:
+          </h2>
+          <div class="radio-wrap">
+            <label class="label-switch" for="switch-one">
+              <input class="forms-switch" id="switch-one" type="radio" value="plus" name="impression" checked>
+              <span class="radio-button"></span>
+              Скорее положительное
+            </label>
+          </div>
+          <div class="radio-wrap">
+            <label class="label-switch" for="switch-two">
+              <input class="forms-switch" id="switch-two" type="radio" value="minus" name="impression">
+              <span class="radio-button"></span>
+              Скорее отрицательное
+            </label>
+          </div>
+          <div class="radio-wrap">
+            <label class="label-switch" for="switch-three">
+              <input class="forms-switch" id="switch-three" type="radio" value="difficult" name="impression">
+              <span class="radio-button"></span>
+              Затрудняюсь ответить
+            </label>
+          </div>
+        </div>
+
+        <hr class="pages-line">
+
+        <!--Посещенные достопримечательности-->
+
+        <div class="reviews-page__attraction">
+          <hr class="pages-lines pages-lines--attraction">
+          <h2 class="reviews-page__title">
+            Посещенные достопримечательности:
+          </h2>
+          <div class="checkbox-wrap">
+            <label class="checkout" for="checkout-one">
+              <input class="forms-checkout" id="checkout-one" type="checkbox" value="bridge" name="attraction" checked>
+              <span class="checkbox-triangle"></span>
+              <span class="checkbox-signature">Мост Дьявола</span>
+            </label>
+
+            <label class="checkout" for="checkout-two">
+              <input class="forms-checkout" id="checkout-two" type="checkbox" value="park" name="attraction" checked>
+              <span class="checkbox-triangle"></span>
+              <span class="checkbox-signature">Слайд-парк</span>
+            </label>
+
+            <label class="checkout" for="checkout-three">
+              <input class="forms-checkout" id="checkout-three" type="checkbox" value="mountain" name="attraction">
+              <span class="checkbox-triangle"></span>
+              <span class="checkbox-signature">Гора-Колокол</span>
+            </label>
+
+            <label class="checkout" for="checkout-four">
+              <input class="forms-checkout" id="checkout-four" type="checkbox" value="cliffs" name="attraction" checked>
+              <span class="checkbox-triangle"></span>
+              <span class="checkbox-signature">Красные скалы</span>
+            </label>
+          </div>
+        </div>
+
+        <hr class="pages-line">
+
+        <!--Опишите эмоции-->
+
+        <div class="reviews-page__emotions">
+          <hr class="pages-lines">
+          <h2 class="reviews-page__title">
+            Опишите свои эмоции:
+          </h2>
+          <textarea class="forms-textarea" id="" cols="30" rows="10" name="textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+          <div class="button-wrap">
+
+            <input class="pages-submit" value="Отправить отзыв" type="submit">
+            <p class="footnote"><sup>*</sup> -- обязательные поля</p>
+          </div>
+
+        </div>
+      </form>
+    </main>
+
+    <!--Футер-->
+
+    <footer class="page-footer">
+
+      <div class="page-footer__hashtag">
+        <b class="footer-hashtag">#
+          <a href="" class="hashtag">visitSEDONA</a>
+        </b>
+      </div>
+
+      <section class="page-footer__social">
+        <a href="#" class="footer-social__link">
+          <img class="social-img social-img--twitter" src="img/icon/icon-twitter.svg" alt="icon-twitter" width="18" height="14">
+          Страница в Twitter
+        </a>
+        <a href="#" class="footer-social__link">
+          <img class="social-img social-img--facebook" src="img/icon/icon-facebook.svg" alt="icon-twitter" width="9" height="18">
+          Страница в Facebook
+        </a>
+        <a href="#" class="footer-social__link">
+          <img class="social-img social-img--youtube" src="img/icon/icon-youtube.svg" alt="icon-twitter" width="20" height="14">
+          Страница в Youtube
+        </a>
+      </section>
+
+      <div class="page-footer__copyright">
+        <p class="footer-copyright__txt">
+          Разработано
+        </p>
+        <a class="page-footer__logo" href="https://htmlacademy.ru">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <g class="footer-logo">
+                <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+              </g>
+            </svg>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Скрипт меню -->
+
+    <script>
+      var html = document.documentElement;
+      html.className = html.className.replace("no-js","js");
+
+      var open = document.querySelector(".menu-toggle");
+      var close = document.querySelector(".toggle-close");
+      var menu = document.querySelector(".main-menu--closed");
+      open.addEventListener("click", function(event)
+      {
+        event.preventDefault();
+        menu.classList.add("main-menu--opened");
+      });
+      close.addEventListener("click", function(event)
+      {
+        event.preventDefault();
+        menu.classList.remove("main-menu--opened");
+      });
+    </script>
+  </body>
+</html>

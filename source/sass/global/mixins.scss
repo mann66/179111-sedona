@@ -1,0 +1,75 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  //&:after {
+  //  content: "";
+  //  display: inline-block;
+  //  width: 100%;
+  //}
+}
+
+@mixin wrapper() {
+  text-align: center;
+}
+
+@mixin link() {
+  text-decoration: none;
+}
+
+@mixin container() {
+
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
+
+@mixin container-fluid () {
+  width: auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@mixin flex-column () {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+}
+
+@mixin page-line () {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+@mixin signature () {
+  font: {
+    family: $font-fmlblt;
+    size: $font-sz;
+  }
+  line-height: 26px;
+  color: #000000;
+  text-transform: none;
+}

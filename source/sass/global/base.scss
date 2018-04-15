@@ -1,0 +1,19 @@
+body {
+  font-family: $font-fml, "Arial", sans-serif;
+  font-size: $font-szs;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//Модуль предложений
+
+.offer {
+  @include container-fluid();
+  text-align: center;
+}
